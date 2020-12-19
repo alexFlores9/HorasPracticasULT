@@ -25,7 +25,7 @@ if ($varsesion == null || $varsesion ='' ) {
 				<li><a href="">Inicio</a></li>
 				<li><a href="">Servicios</a>
 					<ul>
-						<li><a href="">Submenu1</a></li>
+						<li><a href="../tb_directiva/GuardarDirectiva.php">Lista Directiva</a></li>
 						<li><a href="">Submenu2</a></li>
 						<li><a href="">Submenu3</a></li>
 						<li><a href="">Submenu4</a>
