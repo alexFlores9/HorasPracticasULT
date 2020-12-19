@@ -76,7 +76,7 @@
             <td class="text-center"><?php echo $fila['Clave_d']?></td>
             <td class="text-center"><?php echo $fila['Cargo_d']?></td>
             <td class="text-center" >
-                <a  class="btn btn-warning" href = "EditarDirectiva.php?id=<?php echo $fila['id_directiva'] ?>" >EDITAR</a>
+                <a  class="btn btn-primary" href = "EditarDirectiva.php?id=<?php echo $fila['id_directiva'] ?>" >EDITAR</a>
                 <a  class="btn btn-danger" href = "EliminarDirectiva.php?id=<?php echo $fila['id_directiva'] ?>" onClick="return confirmarEliminar()">ELIMINAR</a>
             </td>
         </tr>
