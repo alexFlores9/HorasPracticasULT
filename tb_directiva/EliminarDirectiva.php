@@ -1,6 +1,5 @@
 <?php 
-
-    # code...
+        # code...
     $host = "localhost";
     $user = "root";
     $contraseña = "";
@@ -14,11 +13,11 @@
 
     if ($resultado) {
         # code...
-        echo "<script>alert('Usuario Eliminado Exitosamente');</script>";
-        header("location:ListaDirectiva.php");
+        header("location:ListaDirectiva.php?m=1");
     }else{
-        echo "El usuario no pudo ser eliminado";
+        header("location:ListaDirectiva.php");
     }
+
 
 
 ?>

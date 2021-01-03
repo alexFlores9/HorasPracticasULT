@@ -1,75 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuarios</title>
-    <!-- Estilos de Bustrad!-->
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/btnguardar.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Estilos de Bootstrap!-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
-<style>
-p{
-    font-size = 20px;
-}
-</style>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        input#search{
+        background-color: #063ef6;
+        color: #fff;
+        width: 85px;
+        height: 35px;
+        border-radius: 4px;
+       }
+    </style>
 </head>
 <body>
     <div class="container"><br><br>
     
-    <p><center>Registro de Usuario</center></p>
-        <form method="post">
+    <p><center><h2>Registro de Usuario</h2></center></p>
+        <form method="post" action="ProcesarGuardar.php">
+
             <label>Nombres</label>
             <input type="text" class = "form-control" name="txtNombre" placeholder="Ingrese sus nombres" required><br>
+
             <label>Apellidos</label>
             <input type="text" class = "form-control" name="txtApellido" placeholder="Ingrese sus apellidos" required><br>
+
             <label>Usuario</label>
-            <input type="text" class = "form-control" name="txtUsuario" placeholder="Ingrese su usuario" required><br>
+            <input type="text" class = "form-control" name="txtUsuario" placeholder="&#128100; Ingrese su usuario" required><br>
+
             <label>Clave</label>
-            <input type="text" class = "form-control" name="txtClave" placeholder="Ingrese su clave" required><br>
+            <input type="password" class = "form-control" name="txtClave" placeholder="&#128272; Ingrese su clave" required><br>
+
             <label>Cargo</label>
             <input type="text" class = "form-control" name="txtCargo" placeholder="Ingrese su cargo" required><br>
-            <input type="submit" class = "btn btn-primary" value="Agregar" name="Agregar">
+
+            <input type="submit" id="search" class="btnRegistrar" value="Agregar" name="Agregar">
             <a href="ListaDirectiva.php" class="btn btn-success" >Regresar</a>
+            
         </form>
+
     </div>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/guardarD.js"></script>
 </body>
 </html>
 
-<?php 
-    $host = "localhost";
-    $user = "root";
-    $contraseña = "";
-    $name_db = "bd_tobalon";
-    
-    $conexion = mysqli_connect($host, $user, $contraseña, $name_db);
-    
-    if (isset($_POST['Agregar'])) {
-        # code...
-        $nombre = $_POST['txtNombre'];
-        $apellido = $_POST['txtApellido'];
-        $usuario = $_POST['txtUsuario'];
-        $clave = $_POST['txtClave'];
-        $cargo = $_POST['txtCargo'];
-    
-        $sql = "INSERT INTO tb_directiva (Nombre_d, Apellido_d, Usuario_d, Clave_d, Cargo_d) VALUES ('$nombre','$apellido','$usuario','$clave','$cargo')";
-        $resultado = mysqli_query($conexion, $sql);
-
-        if ($resultado) {
-            echo "Usuario Guardada Exitosamente";
-            header("location:ListaDirectiva.php");
-        }else {
-            echo "El Usuario No Pudo Ser Registrado!!";
-        }
-        
-       
-    }
-    mysqli_close($conexion);
-
-?>
