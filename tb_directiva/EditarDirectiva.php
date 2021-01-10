@@ -26,14 +26,14 @@
     $conexion = mysqli_connect($host, $user, $contraseña, $name_db);
 
     $id_d = $_GET['id'];
-    $sql = "SELECT * FROM tb_directiva WHERE id_directiva ='$id_d'";
+    $sql = "SELECT * FROM tb_directiva WHERE id_Directiva ='$id_d'";
     $resultado = mysqli_query($conexion, $sql);
 
     while ($fila = mysqli_fetch_array($resultado)) {
          
     ?>
         <form method="post" action="ProcesarEditar.php">
-        <input type="hidden" name="id" value="<?php echo $fila['id_directiva']?>">
+        <input type="hidden" name="id" value="<?php echo $fila['id_Directiva']?>">
             <label>Nombres</label>
             <input type="text" class = "form-control" name="txtNombre" placeholder="Ingrese sus nombres" required value = "<?php echo $fila['Nombre_d']?>" ><br>
             <label>Apellidos</label>

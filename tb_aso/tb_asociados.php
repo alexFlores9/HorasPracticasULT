@@ -10,11 +10,11 @@ if (!$conectar) {
         # code...
     }
 }
-   $Npaja=$_POST['Npaja'];
-   $Nombre=$_POST['Nombre'];
+   $Npaja=$_POST['N_paja'];
+   $Nombre=$_POST['Nombre_asociado'];
 
 
-   $sql="INSERT INTO tb_asociados VALUES('$Npaja','$Nombre')";
+   $sql="INSERT INTO tb_asociados VALUES('$N_paja','$Nombre')";
 
 
 $ejecutar=mysql_query($sql);

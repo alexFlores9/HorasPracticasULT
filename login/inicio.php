@@ -22,11 +22,11 @@ if ($varsesion == null || $varsesion ='' ) {
   
 <div id="header">
 			<ul class="nav">
-				<li><a href="">Inicio</a></li>
+				<li><a href="inicio.php">Inicio</a></li>
 				<li><a href="">Servicios</a>
 					<ul>
 						<li><a href="../tb_directiva/GuardarDirectiva.php">Lista Directiva</a></li>
-						<li><a href="">Submenu2</a></li>
+						<li><a href="../tb_fac/Listar_fac.php">tb_fac</a></li>
 						<li><a href="">Submenu3</a></li>
 						<li><a href="">Submenu4</a>
 							<ul>

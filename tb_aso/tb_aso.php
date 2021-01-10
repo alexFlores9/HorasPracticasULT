@@ -1,3 +1,12 @@
+<?php
+session_start();
+error_reporting(0);
+$varsesion = $_SESSION['Usuario'];
+if ($varsesion == null || $varsesion ='' ) {
+   echo 'no tiene autorizacion, si eres de la directiva y no tienes tu cuenta, contactacte con el presidente de la asociacion!';
+   die();
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">

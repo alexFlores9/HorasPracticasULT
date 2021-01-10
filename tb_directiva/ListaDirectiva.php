@@ -68,16 +68,16 @@
                 
                 <tbody>
                     <tr>
-                        <td class="text-center"><?php echo $fila['id_directiva'] ?></td>
+                        <td class="text-center"><?php echo $fila['id_Directiva'] ?></td>
                         <td class="text-center"><?php echo $fila['Nombre_d']?></td>
                         <td class="text-center"><?php echo $fila['Apellido_d']?></td>
                         <td class="text-center"><?php echo $fila['Usuario_d']?></td>
                         <td class="text-center"><?php echo $fila['Clave_d']?></td>
                         <td class="text-center"><?php echo $fila['Cargo_d']?></td>
                         <td class="text-center" >
-                            <a  class="btn btn-primary" href = "EditarDirectiva.php?id=<?php echo $fila['id_directiva'] ?>" >EDITAR</a>
+                            <a  class="btn btn-primary" href = "EditarDirectiva.php?id=<?php echo $fila['id_Directiva'] ?>" >EDITAR</a>
 
-                            <a  class="boton" href="EliminarDirectiva.php?id=<?php echo $fila['id_directiva']; ?>">ELIMINAR</a>    
+                            <a  class="boton" href="EliminarDirectiva.php?id=<?php echo $fila['id_Directiva']; ?>">ELIMINAR</a>    
                         </td>
                     </tr>
                 </tbody>

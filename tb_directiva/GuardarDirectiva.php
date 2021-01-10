@@ -27,6 +27,10 @@
     </style>
 </head>
 <body>
+
+       
+
+
     <div class="container"><br><br>
     
     <p><center><h2>Registro de Usuario</h2></center></p>
