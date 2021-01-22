@@ -9,7 +9,7 @@ if (isset($_POST['AgregarA'])) {
     $resultado = mysqli_query($conn, $GuardarA);
 
     if ($resultado) {
-       // header("location:LAsociados.php");
+        header("location:LAsociados.php");
         echo "guardado";
     }else {
         echo "no bro";
