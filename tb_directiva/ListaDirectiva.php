@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuarios.</title>
-    <link rel="stylesheet" href="boton.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/botonesEliminar.css">
+
+    <!-- Estilos de Bootstrap!-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="../CSS/footer.css">
 
 
     <style>
@@ -52,14 +55,11 @@
                 </tr>
             </thead>
                 <?php 
-                    $host = "localhost";
-                    $user = "root";
-                    $contraseña = "";
-                    $name_db = "bd_tobalon";
+                    //Incluimos la conexion.
+                    include("../Conexion/conexion.php");
 
-                    $conexion = mysqli_connect($host, $user, $contraseña, $name_db);
                     $sql = "SELECT * FROM tb_directiva";
-                    $resultado = mysqli_query($conexion, $sql);
+                    $resultado = mysqli_query($conn, $sql);
 
                     while ($fila = mysqli_fetch_array($resultado)) {
 
@@ -68,20 +68,20 @@
                 
                 <tbody>
                     <tr>
-                        <td class="text-center"><?php echo $fila['id_Directiva'] ?></td>
+                        <td class="text-center"><?php echo $fila['id_directiva'] ?></td>
                         <td class="text-center"><?php echo $fila['Nombre_d']?></td>
                         <td class="text-center"><?php echo $fila['Apellido_d']?></td>
                         <td class="text-center"><?php echo $fila['Usuario_d']?></td>
                         <td class="text-center"><?php echo $fila['Clave_d']?></td>
                         <td class="text-center"><?php echo $fila['Cargo_d']?></td>
                         <td class="text-center" >
-                            <a  class="btn btn-primary" href = "EditarDirectiva.php?id=<?php echo $fila['id_Directiva'] ?>" >EDITAR</a>
+                            <a  class="btn btn-primary" href = "EditarDirectiva.php?id=<?php echo $fila['id_directiva'] ?>" >EDITAR</a>
 
-                            <a  class="boton" href="EliminarDirectiva.php?id=<?php echo $fila['id_Directiva']; ?>">ELIMINAR</a>    
+                            <a  class="boton" href="EliminarDirectiva.php?id=<?php echo $fila['id_directiva']?>">ELIMINAR</a>    
                         </td>
                     </tr>
                 </tbody>
-                <?php } mysqli_close($conexion); ?>
+                <?php } mysqli_close($conn); ?>
         </table>
         <?php if (isset($_GET['m'])){  ?>
         <div class="flash-data" data-flashdata="<?= $_GET['m'];?>"></div>

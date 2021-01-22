@@ -1,0 +1,31 @@
+/*Boton eliminar directiva*/
+.boton{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 240;
+    font-size: 13px;
+    color: #ffffff;
+    background-color: #c12e2a;
+    border-radius: 5px;
+  }
+  .boton:hover{
+    color: #fff;
+    background-color: #c12e2a;
+    text-decoration: none;
+  }
+
+  /*Boton eliminar asociado*/
+  .eAsociado{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 240;
+    font-size: 13px;
+    color: #ffffff;
+    background-color: #c12e2a;
+    border-radius: 5px;
+  }
+  .eAsociado:hover{
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #c12e2a;
+  }

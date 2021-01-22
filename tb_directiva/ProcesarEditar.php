@@ -15,7 +15,7 @@
             $clave = $_POST['txtClave'];
             $cargo = $_POST['txtCargo'];
 
-        $actualizar = "UPDATE tb_directiva SET  Nombre_d = '$nombre',  Apellido_d = '$apellido', Usuario_d='$usuario', Clave_d='$clave', Cargo_d='$cargo' WHERE id_directiva = $idc";
+        $actualizar = "UPDATE tb_directiva SET Nombre_d = '$nombre', Apellido_d = '$apellido', Usuario_d='$usuario', Clave_d='$clave', Cargo_d='$cargo' WHERE id_directiva = $idc";
         $resultado = $conexion->query($actualizar);
         if ($resultado) {   
             header("location:ListaDirectiva.php");

@@ -8,7 +8,6 @@ $_SESSION['Usuario']=$Usuario;
 
 $conexion=mysqli_connect("localhost","root","","bd_tobalon");
 
-
 $consulta="SELECT*FROM tb_directiva  WHERE Usuario_d='$Usuario' AND Clave_d='$Clave' ";
 
 $resultado=mysqli_query($conexion,$consulta);

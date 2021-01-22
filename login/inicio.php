@@ -13,8 +13,9 @@ if ($varsesion == null || $varsesion ='' ) {
     
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="menu.css">
     <title>Bienvenido!</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/menu.css">
 
   
 </head>
@@ -25,7 +26,7 @@ if ($varsesion == null || $varsesion ='' ) {
 				<li><a href="inicio.php">Inicio</a></li>
 				<li><a href="">Servicios</a>
 					<ul>
-						<li><a href="../tb_directiva/GuardarDirectiva.php">Lista Directiva</a></li>
+						<li><a href="../tb_directiva/ListaDirectiva.php">Lista Directiva</a></li>
 						<li><a href="../tb_fac/Listar_fac.php">tb_fac</a></li>
 						<li><a href="">Submenu3</a></li>
 						<li><a href="">Submenu4</a>
@@ -49,8 +50,7 @@ if ($varsesion == null || $varsesion ='' ) {
 				<li><a href="">Contacto</a></li>
 			</ul>
 		</div>
-
-
+		
     <h1>Welcome</h1>
 
 
